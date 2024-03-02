@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dynamic</title>
+    <link href="{{ url_for('static', filename='sem2.css') }}" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <center>
+        <h1 class="h1">{{title}}</h1>
+        <p>
+            <table border="1">
+                <tr class="tr">
+                    <td>Номер</td>
+                    <td>Название</td>
+                    <td>Минимальная зарплата (в рублях)</td>
+                    <td>Максимальная зарплата (в рублях)</td>
+                    <td>Минимальный опыт работы (в годах)</td>
+                    <td>Минимальный уровень образования (в годах)</td>
+                </tr>
+                {% for result in results %}
+                <tr class="tr">
+                    <td>{{ result['St_ID'] }}</td>
+                    <td>{{ result['Job_title'] }}</td>
+                    <td>{{ result['Min_salary'] }}</td>
+                    <td>{{ result['Max_salary'] }}</td>
+                    <td>{{ result['Min_experience'] }}</td>
+                    <td>{{ result['Min_educ_level'] }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </p>
+        <form>
+            <input type="button" class="button" value="В меню выбора" onclick="location.href='/query'">
+        </form>
+    </center>
+</body>
+</html>

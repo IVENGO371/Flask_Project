@@ -1,0 +1,30 @@
+{
+  "User": [
+  ],
+  "Head of department": [
+    "choose_menu",
+    "query_index",
+    "query_index_1",
+    "query_index_2",
+    "query_index_3",
+    "report_menu",
+    "report",
+    "create_report",
+    "view_report",
+    "basket_index",
+    "save_order"
+  ],
+  "Department employee": [
+    "choose_menu",
+    "query_index",
+    "query_index_1",
+    "query_index_2",
+    "query_index_3",
+    "report_menu",
+    "report",
+    "create_report",
+    "view_report",
+    "basket_index",
+    "save_order"
+  ]
+}

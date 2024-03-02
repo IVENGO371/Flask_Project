@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Меню выбора</title>
+    <link href="{{ url_for('static', filename='sem2.css') }}" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <center>
+        <h1 class="h1">Выберите тип запроса</h1>
+        <br><a class="a" href="{{url_for('bp_query.query_index')}}"> Просмотр информации о вакансиях </a><br>
+        <br><a class="a" href="{{url_for('bp_query.query_index_1')}}"> Просмотр информации о сотрудниках отдела </a><br>
+        <br><a class="a" href="{{url_for('bp_query.query_index_2')}}"> Просмотр информации о собеседованиях </a><br>
+        <br><a class="a" href="{{url_for('bp_query.query_index_3')}}"> Информация о всех должностях </a><br><br>
+        <input type="button" class="button" value="Назад" onclick="location.href='/'">
+    </center>
+</body>
+</html>

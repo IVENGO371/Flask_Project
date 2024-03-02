@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ввод параметров</title>'
+    <link href="{{ url_for('static', filename='sem2.css') }}" rel="stylesheet" type="text/css">
+</head>
+<body>
+<center>
+    <h1 class="h1"> Введите название должности вакансии для поиска </h1>
+    <form action="" method="post">
+        <label class="params_label" for="jt"> Название должности </label>
+        <input class="input" type="text" name="jt" id="jt"><br>
+        <input type="submit" class="button" value="Подтвердить">
+        <input type="button" class="button" value="Назад" onclick="history.back()">
+    </form>
+</center>
+</body>
+</html>

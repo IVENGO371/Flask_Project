@@ -1,0 +1,1 @@
+insert into interview_info values(NULL, '$inter_id', '$emp_id', '$cand_id', '$vac_id')

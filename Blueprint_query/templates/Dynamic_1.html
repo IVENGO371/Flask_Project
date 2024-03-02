@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dynamic</title>
+    <link href="{{ url_for('static', filename='sem2.css') }}" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <center>
+        <h1 class="h1">{{title}}</h1>
+        <p>
+            <table border="1">
+                <tr class="tr">
+                    <td>Должность</td>
+                    <td>Дата открытия вакансии</td>
+                    <td>Зарплата</td>
+                </tr>
+                {% for results in result %}
+                <tr class="tr">
+                    <td>{{ results['Job_title'] }}</td>
+                    <td>{{ results['Opening_date'] }}</td>
+                    <td>{{ results['Min_salary'] }} ₽</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </p>
+        <form>
+            <input type="button" class="button" value="Назад" onclick="history.back()">
+            <input type="button" class="button" value="В меню выбора" onclick="location.href='/query'">
+        </form>
+    </center>
+</body>
+</html>

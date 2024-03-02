@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Работа с отчётом</title>
+    <link href="{{url_for('static', filename='sem2.css')}}" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div align="center">
+            {% if result[1] == 0 %}
+                <h2>Отчёт на {{month}}.{{year}} создан</h2>
+                <form action="" method="POST">
+                    <input type="button" class="button" value="В главное меню" onclick="location.href='/'">
+                    <input type="button" class="button" value="В меню выбора отчётов" onclick="location.href='/report'">
+
+                </form>
+            {% elif result[1] == -1 %}
+                <h2>Собеседования на {{month}}.{{year}} не существует</h2>
+                <form action="" method="POST">
+                    <input type="button" class="button" value="В главное меню" onclick="location.href='/'">
+                    <input type="button" class="button" value="В меню выбора отчётов" onclick="location.href='/report'">
+                    <input type="button" class="button" value="Повторить ввод" onclick="location.href='/report/create-report/{{ proc }}'">
+                </form>
+            {% elif result[1] == -2 %}
+                <h2>Отчёт на {{month}}.{{year}} уже существует</h2>
+                <form action="" method="POST">
+                    <input type="button" class="button" value="В главное меню" onclick="location.href='/'">
+                    <input type="button" class="button" value="В меню выбора отчётов" onclick="location.href='/report'">
+                    <input type="button" class="button" value="Повторить ввод" onclick="location.href='/report/create-report/{{ proc }}'">
+                </form>
+            {% endif %}
+    </div>
+</body>
+</html>

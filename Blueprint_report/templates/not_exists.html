@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ошибка</title>
+    <link href="{{url_for('static', filename='sem2.css')}}" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div align="center">
+    <h2>Отчёта на {{month}}.{{year}} не существует</h2>
+    <form action="" method="POST">
+        <input type="button" class="button" value="В главное меню" onclick="location.href='/'">
+        <input type="button" class="button" value="В меню выбора отчётов" onclick="location.href='/report'">
+        <input type="button" class="button" value="Повторить ввод" onclick="location.href='/report/view-report/{{ proc }}'">
+    </form>
+</div>
+</body>
+</html>

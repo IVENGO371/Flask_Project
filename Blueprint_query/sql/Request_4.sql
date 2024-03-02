@@ -1,0 +1,1 @@
+SELECT * FROM staffing WHERE Job_title='$jt'

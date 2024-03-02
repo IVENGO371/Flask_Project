@@ -1,0 +1,32 @@
+{% macro render_item(item, key, show_form=False, show_amount=False) %}
+
+<div style="border-style: solid; border-color: black; margin: 5px">
+    {% if show_form %}
+        <p>
+            <span>Кандидат №{{ item['c_ID'] }}</span>
+            <span style="color: blue">{{ item['c_FIO'] }}</span><br>
+            <span>На вакансию №{{ item['v_ID'] }}</span>
+            <span style="color: blue">{{ item['jt'] }}</span><br>
+        </p>
+
+        <form method="POST" action="">
+            <input type="hidden" name="vac_id" value="{{ item['v_ID'] }}">
+            <input class="input_1" type="submit" name="send" value="Выбрать">
+        </form>
+    {% endif %}
+
+    {% if show_amount %}
+        <p>
+            <span>Кандидат №{{ item[key]['Candidate_ID'] }}</span>
+            <span style="color: blue">{{ item[key]['Candidate_FIO'] }}</span><br>
+            <span>На вакансию №{{ item[key]['Vacancy_ID'] }}</span>
+            <span style="color: blue">{{ item[key]['Job_title'] }}</span><br>
+        </p>
+        <form action="" method="POST">
+            <input class="input_1" type="submit" name="send" value="Удалить">
+            <input type="hidden" name="vac_id_del" value="{{ key }}">
+        </form>
+    {% endif %}
+</div>
+
+{% endmacro %}

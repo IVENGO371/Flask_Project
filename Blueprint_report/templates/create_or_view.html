@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Работа с отчётом</title>
+    <link href="{{url_for('static', filename='sem2.css')}}" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div align="center">
+        <h2>{{title}}</h2>
+        <a class="a" href="{{url_for('.create_report', proc=proc)}}">Создать отчёт</a><br><br>
+        <a class="a" href="{{url_for('.view_report', proc=proc)}}">Просмотреть отчёт</a><br><br>
+
+        <form action="" method="POST">
+            <input type="button" class="button" value="В меню выбора отчётов" onclick="location.href='/report'">
+            <input type="button" class="button" value="В главное меню" onclick="location.href='/'">
+        </form>
+    </div>
+</body>
+</html>

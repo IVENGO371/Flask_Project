@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dynamic</title>
+    <link href="{{ url_for('static', filename='sem2.css') }}" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <center>
+        <h1 class="h1">{{title}}</h1>
+        <p>
+            <table border="1">
+                <tr class="tr">
+                    <td>ФИО</td>
+                    <td>Возраст</td>
+                    <td>Уровень образования</td>
+                    <td>Стаж работы</td>
+                    <td>Должность</td>
+                </tr>
+                {% for result in results %}
+                <tr class="tr">
+                    <td>{{ result['emp_FIO'] }}</td>
+                    <td>{{ result['YEAR(NOW()) - YEAR(Birthday)'] }} лет</td>
+                    <td>{{ result['Education_level'] }}</td>
+                    <td>{{ result['YEAR(NOW()) - YEAR(Hire_date)'] }} лет</td>
+                    <td>{{ result['Job_title'] }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </p>
+        <form>
+            <input type="button" class="button" value="Назад" onclick="history.back()">
+            <input type="button" class="button" value="В меню выбора" onclick="location.href='/query'">
+        </form>
+    </center>
+</body>
+</html>

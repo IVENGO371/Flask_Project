@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Меню отчётов</title>
+    <link href="{{url_for('static', filename='sem2.css')}}" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div align="center">
+        {% if result == -1 %}
+            <h2>Доступных отчётов нет</h2>
+        {% else %}
+            <h2>Доступные отчёты</h2>
+            {% for report in result %}
+                <a class="a" href="{{url_for('.report', proc=report['procedure_name'])}}">{{ report['href_name'] }}</a><br><br>
+            {% endfor %}
+        {% endif %}
+        <form action="" method="POST">
+            <input type="button" class="button" value="В главное меню" onclick="location.href='/'">
+        </form>
+    </div>
+</body>
+</html>

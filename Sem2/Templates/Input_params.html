@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Input parameters</title>'
+    <link href="{{ url_for('static', filename='sem2.css') }}" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <center>
+        <h2> Enter searching parameters </h2>
+        <form action="" method="post">
+            <label for="category"> Product category </label>
+            <input type="text" name="category" id="category"><br>
+            <label for="price"> Product price </label>
+            <input type="text" name="price" id="price"><br><br>
+            <input type="submit" class="button" value="Send">
+            <input type="button" class="button" value="Back" onclick="history.back()">
+        </form>
+    </center>
+</body>
+</html>

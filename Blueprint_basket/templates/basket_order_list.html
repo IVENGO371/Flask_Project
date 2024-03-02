@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Корзина</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <link href="{{ url_for('static', filename='sem2.css') }}" rel="stylesheet" type="text/css">
+</head>
+
+{% import 'basket_utils.html' as utils %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h2> Доступные собеседования </h2>
+            {% for item in items %}
+                {{ utils.render_item(item, 0, show_form=True, show_amount=False) }}
+            {% endfor %}
+        </div>
+        <div class="col-md-6">
+            <h2> Корзина </h2>
+            {% if basket %}
+                {% for key in basket %}
+                    {{ utils.render_item(basket, key, show_form=False, show_amount=True) }}
+                {% endfor %}
+            {% else %}
+                <h2> Корзина пуста </h2>
+            {% endif %}
+        </div>
+    </div>
+</div>
+</html>
+
+<body>
+    <center>
+        <form action="{{ url_for('bp_basket.save_order') }}" method="POST">
+            <input type="submit" class="button" value="Назначить собеседования">
+            <input type="button" class="button" value="В главное меню" onclick="location.href='/'">
+        </form>
+    </center>
+</body>

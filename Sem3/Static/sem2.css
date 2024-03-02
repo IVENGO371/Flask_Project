@@ -1,0 +1,77 @@
+html {
+  background-image: url('https://kartinki.pics/uploads/posts/2021-01/thumbs/1611252011_10-p-svetlo-serii-fon-dlya-saita-11.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+label   {display: inline-block;
+         width: auto;
+         text-align: right;
+         margin: 10px}
+
+.button {
+  min-width: 100px;
+  font-family: inherit;
+  appearance: none;
+  border: 0;
+  border-radius: 5px;
+  background: #437a16;
+  color: #fff;
+  padding: 8px 16px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #437a16;
+}
+
+.button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #265301;
+}
+
+.h1 {
+    font-family: "Times New Roman";
+    font-size: 40px;
+}
+
+tr, label, input {
+    font-family: "Times New Roman";
+    font-size: 30px;
+}
+
+a {
+    font-size: 30px;
+    outline: none;
+    text-decoration: none;
+    padding: 2px 1px 0;
+}
+
+a:link {
+    color: #265301;
+}
+
+a:visited {
+    color: #437a16;
+}
+
+a:focus {
+    border-bottom: 1px solid;
+    background: #bae498;
+}
+
+a:hover {
+    border-bottom: 1px solid;
+    background: #cdfeaa;
+}
+
+a:active {
+    background: #265301;
+    color: #cdfeaa;
+}

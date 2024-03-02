@@ -1,0 +1,1 @@
+SELECT emp_FIO, YEAR(NOW()) - YEAR(Birthday), Education_level, YEAR(NOW()) - YEAR(Hire_date), Job_title FROM employee WHERE Job_title='$jt'
